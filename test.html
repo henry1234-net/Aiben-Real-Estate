@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scaling Text on Scroll</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 200vh; /* Ensures there is enough scrollable height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  height:100vh;
+  width: 100vw;
+}
+
+.scaling-text {
+
+  font-size: 36px; /* Initial font size */
+  transition: font-size 0.3s ease-in-out; /* Smooth transition on font size change */
+}
+
+</style>
+<body>
+<div class="container">
+  <div class="scaling-text" id="scalingText">
+    Scroll down to see the text scale!
+  </div>
+</div>
+<script>
+    window.addEventListener('scroll', function() {
+  // Calculate scale based on scroll position
+  let scale = 1 + window.scrollY / 1000;
+  
+  // Limit the scale to a reasonable size
+  scale = Math.min(scale, 1.5); // Max scale of 2
+  
+  // Apply the scale to the text
+  document.getElementById('scalingText').style.fontSize = `${scale * 36}px`;
+});
+
+</script>
+</body>
+</html>
