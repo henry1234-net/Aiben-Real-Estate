@@ -67,7 +67,7 @@ window.addEventListener('scroll', function() {
             // Reduce opacity of other hovered elements
             hovered.forEach(otherHover => {
                 if (otherHover !== hovers) {
-                    otherHover.style.opacity = '0.2';
+                    otherHover.style.opacity = '0.7';
                 }
             });
         });

@@ -354,11 +354,11 @@ button:hover::before {
     background: url('./images/pngwing.png') center/cover fixed;
     background-repeat: no-repeat;
     height: 120vh;
-    overflow: hidden;
 }
 
 .parallax-section.parallax-3 {
-    background: url('./images/3.jpg') center/cover fixed;
+    background: url('./images/pngwing.png') center/cover fixed;
+    height: fit-content;
 }
 
 .parallax-content {
@@ -456,7 +456,7 @@ button:hover::before {
 }
 
 .content-section{
-    padding-top: 50px;
+    padding-top: 20px;
     text-align: center;
     min-height: 88.4vh;
     color: var(--whiteColor);
@@ -494,39 +494,86 @@ button:hover::before {
     width: 100vw;
     height: fit-content;
     min-height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    flex-wrap: wrap;
+    
+    flex-wrap: nowrap;
     flex-direction: row;
     column-gap: 20px;
     padding-bottom: 20px;
 }
 
+.staffContainer .ceo{
+    width: 80vw;
+    height: 80vh;
+    background: rgb(22 22 23 / 50%);
+    backdrop-filter: blur(20px);
+    margin: 10px auto 0 auto;
+    border-radius: 20px;
+    display: flex;
+}
+
+.staffContainer .ceo .staff{
+    width: 100%;
+    height: 80vh;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.moreDetails{
+    max-width: 100%;
+    padding: 40px;
+}
+
+.moreDetails p{
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: -17px;
+}
+
+.staffContainer .otherStaff{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 100px 0 100px 0;
+}
+
+.staffContainer .otherStaff .staff{
+    border-radius: 20px;
+}
+
 .staffContainer .staff{
-    max-width:200px;
-    height: 300px;
+    max-width:350px;
+    height: 450px;
     display: flex;
     align-items: flex-end;
-    border-radius: 20px;
     overflow: hidden;
     transition: .3s ease-in-out;
 }
 
-.staffContainer .staff:hover{
-    transform: scale(1.1);
+.otherStaff .staff:hover{
+    transform: scale(0.96);
 }
 
 .staffContainer .staff .staffDetails{
-    max-height: 70px;
     font-size: 1.5rem;
+    width: 100%;
     /* overflow-y: scroll; */
-    background: rgb(22 22 23 / 50%);
+    background: rgb(22 22 23 / 80%);
     backdrop-filter: blur(20px);
     color: var(--whiteColor);
-    padding-bottom: 75px;
+    padding: 10px 20px;
+    margin-bottom: -2px;
 }
+
+.staffContainer .staff .staffDetails .title{
+    color: var(--red);
+    font-size: 1.6rem;
+}
+
+.staffContainer .staff .staffDetails .name{
+    font-size: 2rem;
+}
+
 /* .staffContainer .staff .staffDetails::-webkit-scrollbar-thumb{
     background-color: var(--light-blue);
     border-radius: 10px;
@@ -538,26 +585,24 @@ button:hover::before {
 } */
 
 .staffContainer .one{
-    background: url("./images/staffImg/staff1.jpg") center/cover;
+    background: url("./images/staffImg/CEO.png") center/cover;
+    background-repeat: no-repeat;
 }
 .staffContainer .two{
-    background: url("./images/staffImg/staff2.jpg") center/cover;
+    background: url("./images/staffImg/Team-4.png") center/cover;
 }
 .staffContainer .three{
-    background: url("./images/staffImg/staff3.jpg") center/cover;
+    background: url("./images/staffImg/Team-1.png") center/cover;
 }
 .staffContainer .four{
-    background: url("./images/staffImg/staff4.jpg") center/cover;
-}
-.staffContainer .five{
-    background: url("./images/staffImg/staff5.jpg") center/cover;
+    background: url("./images/staffImg/Team-3.png") center/cover;
 }
 
 .content-section.project{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
+    margin: 0 0 100px 0;
     padding-top: 20px;
     width: 100%;
 }
@@ -710,4 +755,126 @@ footer {
     100%{
         transform: translateY(0);
     }
+}
+
+/*--------------------------------------------------------------MEDIA QUERIES-----------------------------------------------------------------*/
+@media (max-width: 575.98px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    h1.Welcome{
+        font-size: 1.8rem;
+        line-height: 10px;
+        width: 100vw;
+    }
+    h1.Welcome img{
+        width: 60px;
+        height: auto;
+    }
+    .parallax-content .hero-parallax {
+        right: 0;
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .parallax-content .hero-parallax .parallax-1Txt{
+        font-size: 1.5rem;
+    }
+
+    div.parallax-1Txt{
+        margin-top: 10px;
+    }
+
+    .parallax-1Txt .anim{
+        height: 1.3rem;
+    }
+
+    #animation{
+        font-weight: 600;
+    }
+    
+    nav{
+        display: none;
+    }
+
+    .parallax-section.parallax-1::before {
+        content: '';
+        background: rgba(0,0,0,0.6);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+
+    .hero-buttons button{
+        font-size: 1.3rem;
+        width: fit-content;
+        padding: 5px 20px;
+    }
+
+    p{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+
+    }
+    .content .p1::first-letter{
+        font-size: 3rem;
+    }
+    .content .p1{
+        margin-top: 10px;
+    }
+    .content{
+        height: fit-content;
+    }
+    .service{
+        width: 100%;
+        padding: 0;
+        display: block;
+        margin: 0 auto;
+    }
+   
+    .service .section1, .service .section2, .section3{
+        width: 90%;
+        height: fit-content;
+        position: relative;
+        display: block;
+        margin: 40px auto;
+        padding: 0;
+        background: none;
+        backdrop-filter: none;
+    }
+    .service p, .service .section1{
+        font-size: 1.5rem;
+        background: rgb(22 22 23 / 80%);
+        backdrop-filter: blur(5px);
+        max-width: 90vw;
+        padding: 15px;
+    }
+
+    .service-text p::first-line{
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+    .service .sectionContainer{
+        height: fit-content;
+        width: 100%;
+        position: relative;
+        display: block;
+    }
+    .service-text{
+        display: block;
+        width: 100%;
+    }
+    .service-text img{
+        display: none;
+        opacity: 0;
+    }
+    .parallax-section.parallax-2 {
+        height: fit-content;
+    }
+    
 }
