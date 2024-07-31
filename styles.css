@@ -494,7 +494,6 @@ button:hover::before {
     width: 100vw;
     height: fit-content;
     min-height: 60vh;
-    
     flex-wrap: nowrap;
     flex-direction: row;
     column-gap: 20px;
@@ -656,7 +655,6 @@ button:hover::before {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     background: rgb(22 22 23 / 50%);
     backdrop-filter: blur(10px);
     min-height: 50px;
@@ -716,6 +714,10 @@ footer {
     padding: 20px 0;
 }
 
+.red{
+    color: var(--light-grey);
+}
+
 
 /*------------------------------------------------ANIMATIONS-------------------------------------------------*/
 @keyframes textAnim {
@@ -765,13 +767,17 @@ footer {
         box-sizing: border-box;
         width: 100%;
     }
+    body{
+        font-size: 1.5rem;
+    }
     h1.Welcome{
-        font-size: 1.8rem;
-        line-height: 10px;
+        font-size: 3rem;
+        line-height: 40px;
+        padding: 20px;
         width: 100vw;
     }
     h1.Welcome img{
-        width: 60px;
+        width: 100px;
         height: auto;
     }
     .parallax-content .hero-parallax {
@@ -785,7 +791,7 @@ footer {
     }
 
     div.parallax-1Txt{
-        margin-top: 10px;
+        margin-top: -10px;
     }
 
     .parallax-1Txt .anim{
@@ -811,18 +817,18 @@ footer {
     }
 
     .hero-buttons button{
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         width: fit-content;
         padding: 5px 20px;
     }
 
     p{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         line-height: 2.5rem;
 
     }
     .content .p1::first-letter{
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .content .p1{
         margin-top: 10px;
@@ -848,7 +854,7 @@ footer {
         backdrop-filter: none;
     }
     .service p, .service .section1{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         background: rgb(22 22 23 / 80%);
         backdrop-filter: blur(5px);
         max-width: 90vw;
@@ -875,6 +881,44 @@ footer {
     }
     .parallax-section.parallax-2 {
         height: fit-content;
+    }
+
+    .content-section h2{
+        font-size: 1.8rem;
+    }
+    .projectSection .projects {
+        border-radius: 0;
+    }
+
+    .projects .projectSpanText p{
+        width: 80vw;
+        text-align: center;
+    }
+    .prev::before, .next::before{
+        width: 45px;
+        height: 45px;
+        font-size: 45px;
+    }
+    .staffContainer .ceo{
+        display: block;
+        position: relative;
+        height: fit-content;
+    }
+    .staffContainer .ceo, .staffContainer .ceo .staff{
+        border-radius: 5px;
+    }
+    .staffContainer .ceo, .staffContainer .ceo .moreDetails p{
+        font-size: 1.3rem;
+        padding: 10px; 
+        text-justify: auto;
+        word-spacing: -.041em;
+    }
+
+    .staffContainer .otherStaff{
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 20px;
+        margin-top: 10px;
     }
     
 }
