@@ -876,9 +876,7 @@ footer {
         text-align: justify;
     }
     .prev::before, .next::before{
-        width: 45px;
-        height: 45px;
-        font-size: 45px;
+        display: none;
     }
     .staffContainer .ceo{
         display: block;
@@ -910,6 +908,9 @@ footer {
     .content-section h2{
         margin-bottom: 20px;
         font-size: 1.5em;
+    }
+    .projectSection{
+        overflow-x: scroll;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) { /*Tablet (Portrait and Landscape)*/
