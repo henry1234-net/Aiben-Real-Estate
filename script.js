@@ -9,18 +9,6 @@ navSelect.forEach(nav =>{
 });
 });
 
-// navbar dropdown menu reveal
-const dropdown = document.querySelector('#dropdown')
-const dropMenu = document.querySelector('#dropdownMenu')
-
-dropdown.addEventListener('mouseover', () =>{
-  dropMenu.style.display = 'block';
-
-  dropdown.addEventListener('mouseout', () =>{
-    dropMenu.style.display = 'none';
-  })
-})
-
 const parallax1TxtAnimation = document.querySelector("#animation")
 let parallax1AnimatedTxt = [
     "development",
